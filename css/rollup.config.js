@@ -5,15 +5,15 @@ export default [{
   input: 'index.js',
   output: [
     {
-      file: 'dist/cjs.js',
+      file: 'cjs.js',
       format: 'cjs'
     },
     {
-      file: 'dist/esm.js',
+      file: 'esm.js',
       format: 'esm'
     },
     {
-      file: 'dist/iife.js',
+      file: 'iife.js',
       format: 'iife',
       name: 'happycat.css'
     }

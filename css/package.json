@@ -1,9 +1,9 @@
 {
   "name": "@happycat/css",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "access": "public",
   "description": "CSS in JavaScript using template literals and stylis",
-  "main": "dist/esm.js",
+  "main": "esm.js",
   "scripts": {
     "prepublish": "npm run build",
     "build": "rollup -c"
