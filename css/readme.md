@@ -13,15 +13,9 @@ Uses [Stylis.js](https://github.com/thysultan/stylis.js) and auto-injects style 
   <script type="module">
     import css from 'https://npmcdn.com/@happycat/css'
 
-    const pink = css(`
-      color: hotpink;
-    `)
-
-    document.body.innerHTML = `
-      <h1 class="${pink}">
-        I want it pink!
-      </h1>
-    `
+    const pink = css('color: hotpink;')
+    
+    document.body.innerHTML = '<h1 class="${pink}">I want it pink!</h1>'
   </script>
 </body>
 ```
@@ -33,15 +27,9 @@ Uses [Stylis.js](https://github.com/thysultan/stylis.js) and auto-injects style 
 ```
 import css from '@happycat/css/cjs'
 
-const pink = css(`
-  color: hotpink;
-`)
+const pink = css('color: hotpink;')
 
-document.body.innerHTML = `
-  <h1 class="${pink}">
-    I want it pink!
-  </h1>
-`
+document.body.innerHTML = '<h1 class="${pink}">I want it pink!</h1>'
 ```
 
 ### Old school
@@ -50,15 +38,9 @@ document.body.innerHTML = `
 <body>
   <script src="https://npmcdn.com/@happycat/css/iife"></script>
   <script>
-    const pink = happycat.css(`
-      color: hotpink;
-    `)
-
-    document.body.innerHTML = `
-      <h1 class="${pink}">
-        I want it pink!
-      </h1>
-    `
+    const pink = happycat.css('color: hotpink;')
+    
+    document.body.innerHTML = '<h1 class="${pink}">I want it pink!</h1>'
   </script>
 </body>
 ```
