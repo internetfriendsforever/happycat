@@ -1,23 +1,13 @@
 import stylis from 'stylis'
 
 function css (input) {
-  if (typeof input === 'function') {
-    return function () {
-      return css(input.apply(null, Array.prototype.slice.call(arguments)))
-    }
-  }
-
-  if (typeof input === 'string') {
-    const hash = hashCode(input)
-    const name = 'css' + hashCode(input)
-    const className = '.' + name
-    const id = 'style-' + hash
-    const css = stylis(className, input)
-    inject(id, css)
-    return name
-  }
-
-  console.error('@happycat/css expects a function or a string, while a', typeof input, 'was provided')
+  const hash = hashCode(input)
+  const name = 'css-' + hashCode(input)
+  const className = '.' + name
+  const id = 'style-' + hash
+  const css = stylis(className, input)
+  inject(id, css)
+  return name
 }
 
 function inject (id, css) {
