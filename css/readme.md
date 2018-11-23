@@ -43,7 +43,9 @@ document.body.appendChild(text)
 
 ### CommonJS
 
-`npm i @happycat/css`
+```
+npm install @happycat/css
+```
 
 ```javascript
 import css from '@happycat/css/cjs'
