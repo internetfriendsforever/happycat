@@ -8,14 +8,14 @@ Uses [Stylis.js](https://github.com/thysultan/stylis.js) and auto-injects style 
 
 ### Simple
 
-```
+```javascript
 const pink = css('color: hotpink;')
 document.body.innerHTML = '<h1 class="${pink}">I want it pink!</h1>'
 ```
 
 ### Extend
 
-```
+```javascript
 const style = css(`
   font-size: 4em;
   color: blue;
@@ -33,7 +33,7 @@ document.body.appendChild(text)
 
 ### ECMAScript modules (esm)
 
-```
+```html
 <body>
   <script type="module">
     import css from 'https://npmcdn.com/@happycat/css'
@@ -46,14 +46,14 @@ document.body.appendChild(text)
 
 `npm i @happycat/css`
 
-```
+```javascript
 import css from '@happycat/css/cjs'
 // code here!
 ```
 
 ### Old school
 
-```
+```html
 <body>
   <script src="https://npmcdn.com/@happycat/css/iife"></script>
   <script>
