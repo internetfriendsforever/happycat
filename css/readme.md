@@ -4,7 +4,7 @@ Minimal CSS in JS
 
 Uses [Stylis.js](https://github.com/thysultan/stylis.js) and auto-injects style (similar to [emotion](https://github.com/emotion-js/emotion)).
 
-## Usage:
+## Use
 
 ### Simple
 
@@ -31,34 +31,29 @@ text.className = css(style, pink)
 document.body.appendChild(text)
 ```
 
-### ECMAScript modules (esm)
+## Install
+
+### ECMAScript module
 
 ```html
-<body>
-  <script type="module">
-    import css from 'https://npmcdn.com/@happycat/css'
-    // code here!
-  </script>
-</body>
+<script type="module">
+  import css from 'https://npmcdn.com/@happycat/css'
+</script>
 ```
 
-### Webpack/browserify
+### CommonJS
 
 `npm i @happycat/css`
 
 ```javascript
 import css from '@happycat/css/cjs'
-// code here!
 ```
 
-### Old school
+### Script tag
 
 ```html
-<body>
-  <script src="https://npmcdn.com/@happycat/css/iife"></script>
-  <script>
-    const css = happycat.css
-    // code here!
-  </script>
-</body>
+<script src="https://npmcdn.com/@happycat/css/iife"></script>
+<script>
+  // happycat.css
+</script>
 ```
