@@ -1,8 +1,6 @@
 import stylis from 'stylis'
 
 function css (...inputs) {
-  console.log(inputs)
-
   const styles = inputs.map(input => {
     if (typeof input === 'string') {
       return createStyle(input)
