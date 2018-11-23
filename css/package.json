@@ -10,11 +10,13 @@
   ],
   "scripts": {
     "prepublish": "npm run build",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "dev": "rollup -c -w & http-server -c-1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "http-server": "^0.11.1",
     "rollup": "^0.66.6",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^3.4.0",
