@@ -1,0 +1,17 @@
+<body>
+  <script type='module'>
+    import css from '../css/esm.js'
+
+    const style = css(`
+      font-size: 4em;
+      color: blue;
+    `)
+
+    const text = document.createElement('h1')
+
+    text.innerText = 'Hello'
+    text.className = css(style, 'color: hotpink;')
+
+    document.body.appendChild(text)
+  </script>
+</body>
