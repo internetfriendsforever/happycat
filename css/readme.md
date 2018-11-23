@@ -6,16 +6,38 @@ Uses [Stylis.js](https://github.com/thysultan/stylis.js) and auto-injects style 
 
 ## Usage:
 
+### Simple
+
+```
+const pink = css('color: hotpink;')
+document.body.innerHTML = '<h1 class="${pink}">I want it pink!</h1>'
+```
+
+### Extend
+
+```
+const style = css(`
+  font-size: 4em;
+  color: blue;
+`)
+
+const pink = 'color: hotpink;'
+
+const text = document.createElement('h1')
+
+text.innerText = 'Hello'
+text.className = css(style, pink)
+
+document.body.appendChild(text)
+```
+
 ### ECMAScript modules (esm)
 
 ```
 <body>
   <script type="module">
     import css from 'https://npmcdn.com/@happycat/css'
-
-    const pink = css('color: hotpink;')
-    
-    document.body.innerHTML = '<h1 class="${pink}">I want it pink!</h1>'
+    // code here!
   </script>
 </body>
 ```
@@ -26,10 +48,7 @@ Uses [Stylis.js](https://github.com/thysultan/stylis.js) and auto-injects style 
 
 ```
 import css from '@happycat/css/cjs'
-
-const pink = css('color: hotpink;')
-
-document.body.innerHTML = '<h1 class="${pink}">I want it pink!</h1>'
+// code here!
 ```
 
 ### Old school
@@ -38,9 +57,8 @@ document.body.innerHTML = '<h1 class="${pink}">I want it pink!</h1>'
 <body>
   <script src="https://npmcdn.com/@happycat/css/iife"></script>
   <script>
-    const pink = happycat.css('color: hotpink;')
-    
-    document.body.innerHTML = '<h1 class="${pink}">I want it pink!</h1>'
+    const css = happycat.css
+    // code here!
   </script>
 </body>
 ```

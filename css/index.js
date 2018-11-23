@@ -1,21 +1,48 @@
 import stylis from 'stylis'
 
-function css (input) {
+function css (...inputs) {
+  const styles = inputs.map(input => {
+    if (typeof input === 'string') {
+      return createStyle(input)
+    } else if (typeof input === 'object' && input._style) {
+      return input
+    }
+  })
+
+  const style = merge(styles)
+
+  inject(style)
+
+  return style
+}
+
+function createStyle (input) {
   const hash = hashCode(input)
   const name = 'css-' + hashCode(input)
   const className = '.' + name
   const id = 'style-' + hash
   const css = stylis(className, input)
-  inject(id, css)
-  return name
+  const style = { id, name, className, input, css }
+  style.toString = () => name
+  style._style = true
+  return style
 }
 
-function inject (id, css) {
-  if (!document.getElementById(id)) {
+function merge (styles) {
+  return createStyle(
+    styles
+      .filter(style => style)
+      .map(style => style.input)
+      .join('\n')
+  )
+}
+
+function inject (style) {
+  if (!document.getElementById(style.id)) {
     const element = document.createElement('style')
-    element.id = id
+    element.id = style.id
     document.head.appendChild(element)
-    element.innerHTML = css
+    element.innerHTML = style.css
   }
 }
 
