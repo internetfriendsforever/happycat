@@ -1,7 +1,9 @@
 {
   "name": "@happycat/css",
   "version": "0.0.10",
-  "access": "public",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "CSS in JavaScript using template literals and stylis",
   "main": "esm.js",
   "files": [
