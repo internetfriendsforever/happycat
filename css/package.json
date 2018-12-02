@@ -13,7 +13,7 @@
     "build": "rollup -c",
     "dev": "rollup -c -w & http-server -c-1"
   },
-  "author": "",
+  "author": "internetfriendsforever <anyone@internetfriendsforever.com>",
   "license": "ISC",
   "devDependencies": {
     "http-server": "^0.11.1",
