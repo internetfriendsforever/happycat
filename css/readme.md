@@ -35,13 +35,13 @@ import css from '@happycat/css/cjs'
 
 ```javascript
 
-// Basic use
+// Basic
 const paragraph = css(`
   font-size: 4em;
   color: blue;
 `)
 
-// Extending
+// Extend
 const pinkParagraph = css(paragraph, `
   color: hotpink;
 `)
