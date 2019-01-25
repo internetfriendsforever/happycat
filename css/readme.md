@@ -33,21 +33,15 @@ import css from '@happycat/css/cjs'
 
 ## Use
 
-### Simple
-
 ```javascript
-const pink = css('color: hotpink;')
-document.body.innerHTML = '<h1 class="${pink}">I want it pink!</h1>'
-```
 
-### Extend
-
-```javascript
+// Basic use
 const paragraph = css(`
   font-size: 4em;
   color: blue;
 `)
 
+// Extending
 const pinkParagraph = css(paragraph, `
   color: hotpink;
 `)
