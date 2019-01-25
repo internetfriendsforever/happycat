@@ -43,17 +43,17 @@ document.body.innerHTML = '<h1 class="${pink}">I want it pink!</h1>'
 ### Extend
 
 ```javascript
-const text = css(`
+const paragraph = css(`
   font-size: 4em;
   color: blue;
 `)
 
-const pink = css(style, `
+const pinkParagraph = css(paragraph, `
   color: hotpink;
 `)
 
 document.body.innerHTML = `
-  <h1 class="${text}">Here is some text</h1>
-  <p class="${pink}">Here is some PINK text</p>
+  <p class="${paragraph}">Here is a styled paragraph</p>
+  <p class="${pinkParagraph}">Here is some PINK text</p>
 `
 ```
