@@ -43,17 +43,17 @@ document.body.innerHTML = '<h1 class="${pink}">I want it pink!</h1>'
 ### Extend
 
 ```javascript
-const style = css(`
+const text = css(`
   font-size: 4em;
   color: blue;
 `)
 
-const pink = 'color: hotpink;'
+const pink = css(style, `
+  color: hotpink;
+`)
 
-const text = document.createElement('h1')
-
-text.innerText = 'Hello'
-text.className = css(style, pink)
-
-document.body.appendChild(text)
+document.body.innerHTML = `
+  <h1 class="${text}">Here is some text</h1>
+  <p class="${pink}">Here is some PINK text</p>
+`
 ```
