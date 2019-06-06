@@ -1,14 +1,16 @@
 {
   "name": "@happycat/css",
-  "version": "0.0.10",
+  "version": "0.0.12",
   "publishConfig": {
     "access": "public"
   },
   "description": "CSS in JavaScript using template literals and stylis",
-  "main": "esm.js",
+  "main": "cjs.js",
+  "module": "esm.js",
   "files": [
     "iife.js",
-    "cjs.js"
+    "cjs.js",
+    "esm.js"
   ],
   "scripts": {
     "prepublish": "npm run build",
