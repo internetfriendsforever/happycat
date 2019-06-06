@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const path = require('path')
 const copy = require('copy')
 const package = require(path.join(process.cwd(), 'package.json'))

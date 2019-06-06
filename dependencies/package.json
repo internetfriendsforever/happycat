@@ -1,8 +1,11 @@
 {
   "name": "@happycat/dependencies",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "publishConfig": {
     "access": "public"
+  },
+  "bin": {
+    "dependencies": "./index.js"
   },
   "description": "Copy dependencies from node_modules to modules for use with EcmaScript modules",
   "main": "index.js",
